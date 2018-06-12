@@ -16,10 +16,7 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 ## Lab tutorial
 ### Run the Original Template
-1.1.  Use your web browser to view the template,and then use the browser’s Copy and Save this file to a location on your local computer’s hard drive.
-
-	https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/EC2/EC2InstanceWithSecurityGroupSample.yaml
-
+1.1.  Download the **workshop.yml** in the repository.
 
 1.2. Open this file in a text editor (preferably one that is JSON- or YAML or AWS CloudFormation- aware). In the particular, note the following features of this file:.
 
@@ -30,20 +27,20 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 1.4. Click **Create Stack**.
 
-1.5. On the **Select Template** page, click the **Upload a template to Amazon S3** option. Click **Choose File** or 	**Browse** and select the template that you have been saving on your local hard drive..
+1.5. On the **Select Template** page, click the **Upload a template to Amazon S3** option. Click **Choose File** or **Browse** and select the template that you have been saving on your local hard drive..
 
 1.6. Click **Next**.
 
 1.7. On the **Specify Detail** page, use the following values:
 
-* Stack name: SecurityGroupCFTemplate
+* Stack name: **SecurityGroupCFTemplate**
 * **KeyName**: select an existing EC2 keypair
 
 1.8. Click **Next**.
 
 1.9. On the **Options** page, create tags to associate with the resources created by the Template.Enter the following values:
-* Key: Name
-* Value:EC2Instance
+* Key: **Name**
+* Value:**EC2Instance**
 
 1.10. Click **Next**.
 
@@ -58,6 +55,8 @@ The following procedures help you quickly deploy your application through AWS Cl
 1.14. Click the **Running Instances** link.
 
 1.15. Verify that your **EC2 Instance‘s** Security Groups is now only allow SSH traffic.
+
+![2.png](/images/2.png)
 
 ### Change Security Group Inbound Rule to Template
 
@@ -113,13 +112,15 @@ fix it; or ask your instructor for solve it.
 
 3.11. The status of your stack will change to **UPDATE_IN_PROGRESS** while the update takes place. Wait until it says **UPDATE_COMPLETE** before proceeding to the next step.
 
+![3.png](/images/3.png)
+
 3.12. On the **Services** menu, click **EC2**.
 
 3.13. Click the **Running Instances** link.
 
 3.14. Verify that your **EC2Instance‘s** Security Groups is being update to allow HTTP traffic.
 
-
+![4.png](/images/4.png)
 
 ## Conclusion
 
