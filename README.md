@@ -39,7 +39,7 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 1.9. On the **Options** page, create tags to associate with the resources created by the Template. Enter the following values:
 * Key: **Name**
-* Value:**EC2Instance**
+* Value: **EC2Instance**
 
 1.10. Click **Next**.
 
