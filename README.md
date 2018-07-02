@@ -11,8 +11,7 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 >Sign-in a AWS account, and make sure you have select N.Virginia region.
 
->Make sure you have an Amazon EC2 key pair in the N.Virginia region. If you don’t have, see below link:
->https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair
+>Make sure you have an Amazon EC2 key pair in the N.Virginia region. If you don’t have, see [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) link to create your key pair.
 
 ## Lab tutorial
 ### Run the Original Template
