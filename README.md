@@ -3,13 +3,13 @@
 
 
 ## Scenario
-The following procedures help you quickly deploy your application through AWS CloudFormation. Modify a YAML script so that it will change original security group inbound rule, and then to confirm the update stack become effective.
+The following procedures help you quickly deploy your application through AWS CloudFormation. Modify a YAML script so that it will change original security group inbound rule, and then to confirm the update stack to become effective.
 
 
 ## Prerequisites
 >The workshop’s region will be in ‘N.Virginia’
 
->Sign-in a AWS account, and make sure you have select N.Virginia region.
+>Sign-in an AWS account and make sure you have select N.Virginia region.
 
 >Make sure you have an Amazon EC2 key pair in the N.Virginia region. If you don’t have, see [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) link to create your key pair.
 
@@ -17,16 +17,16 @@ The following procedures help you quickly deploy your application through AWS Cl
 ### Run the Original Template
 1.1.  Download the **workshop.yml** in the repository.
 
-1.2. Open this file in a text editor (preferably one that is JSON- or YAML or AWS CloudFormation- aware). In the particular, note the following features of this file:.
+1.2. Open this file in a text editor (preferably one that is JSON- or YAML or AWS CloudFormation- aware). In the particular, note the following features of this file:
 
 * This template creates an EC2 security group for the instance to give you SSH access.
-* You will try to change security group inbound rule and confirm change status in the following steps.
+* You will try to change the security group inbound rule and confirm change status in the following steps.
 
 1.3. On the **Services menu**, click **CloudFormation**.
 
 1.4. Click **Create Stack**.
 
-1.5. On the **Select Template** page, click the **Upload a template to Amazon S3** option. Click **Choose File** or **Browse** and select the template that you have been saving on your local hard drive..
+1.5. On the **Select Template** page, click the **Upload a template to Amazon S3** option. Click **Choose File** or **Browse** and select the template that you have been saving on your local hard drive.
 
 1.6. Click **Next**.
 
@@ -53,7 +53,7 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 1.14. Click the **Running Instances** link.
 
-1.15. Verify that your **EC2 Instance‘s** Security Groups is now only allow SSH traffic.
+1.15. Verify that your **EC2 Instance‘s** Security Groups is now only allowing SSH traffic.
 
 ![2.png](/images/2.png)
 
@@ -63,19 +63,19 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 2.2. Search in the template for the string **SecurityGroupIngress**. Find the entire value of the below command:
 
-	IpProtocol: tcp
+    IpProtocol: tcp
     FromPort: '22'
     ToPort: '22'
     CidrIp: !Ref 'SSHLocation'
 
 2.3. Copy the following text to replace above command in your template:
 
-	IpProtocol: tcp
+    IpProtocol: tcp
     FromPort: '80'
     ToPort: '80'
     CidrIp: 0.0.0.0/0
 
-2.4. Save the template as text file.
+2.4. Save the template as the text file.
 
 
 ### Update Your Existing Stack
@@ -92,12 +92,12 @@ The following procedures help you quickly deploy your application through AWS Cl
 
 >Note: At this point, AWS CloudFormation may detect an error in your template. AWS CloudFormation can detect two types of errors before executing your template:
 
-* Syntax errors. Common culprits of syntax errors are un balanced brackets and missing commas after an object within a JSON array. Editing your file with a text editor that supports syntax checking (“linting”) of JavaScript or JSON files can help detect and eliminate these errors early.
+* Syntax errors. Common culprits of syntax errors are unbalanced brackets and missing commas after an object within a JSON array. Editing your file with a text editor that supports syntax checking (“linting”) of JavaScript or JSON files can help detect and eliminate these errors early.
 
 * Reference errors. AWS CloudFormation is intelligent about the way you refer to other elements within an AWS Template file. For example, if you try to use the Ref intrinsic function that before you can proceed further with creating your stack.
 
 If you receive an error at this stage, use your text editor or IDE to attempt to
-fix it; or ask your instructor for solve it.
+fix it, or ask your instructor to solve it.
 
 3.6. On the **Specify Details** page, for BastionInstance, type t2.small.
 
@@ -117,7 +117,7 @@ fix it; or ask your instructor for solve it.
 
 3.13. Click the **Running Instances** link.
 
-3.14. Verify that your **EC2Instance‘s** Security Groups is being update to allow HTTP traffic.
+3.14. Verify that your **EC2Instance‘s** Security Groups is being updated to allow HTTP traffic.
 
 ![4.png](/images/4.png)
 
